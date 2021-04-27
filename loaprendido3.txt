@@ -1,0 +1,74 @@
+a="Formulario de acceso al sistema" #título del formulario
+a_may=a.upper() #utilizando la función upper
+print(a_may) #imprime el título con la nueva función, poniéndolo en mayúscula
+
+print("") #salto de línea(debo buscar otra manera de hacerlo)
+
+print("Empezaremos con unas preguntas básicas para saber si cumples con los requisitos de ingreso \n")
+
+nombre=(input("¿Cuál es tu nombre? \n\n"))
+print("")
+print(str(nombre) + "," +" es un placer conocerte")
+
+edad=int(input("Indicanos tu edad: ")) #para ingresar por teclado un valor, en este caso, edad
+intentos=0
+while edad<18 or edad>100: #bucle para poner condición en un intervalo de edad
+	print("No está permitido tu ingreso")
+
+	if intentos==1: #limitar el bucle
+	    print("Has ingresado demasiadas veces un valor que no corresponde a una edad permitida")
+	    break #corta el bucle cuando el número de intentos llega a 2
+
+	edad=int(input("Indicanos tu edad: ")) #vuelve y pregunta por edad en caso de que la condición del while sea V
+	if edad<18 or edad>100:
+		intentos=intentos+1 #actua de contador para limitar el bucle
+
+#MODULO UNO
+
+print("")
+print("PRUEBA UNO")
+print("En este módulo vamos a evaluar la capacidad que tiene nuestro sistema de hacer operaciones matemáticas")
+
+def suma(numero1,numero2): #se declaran funciones que van a ser utilizadas más adelante
+	return numero1+numero2
+def resta(numero1,numero2):
+	return numero1-numero2
+def producto(numero1,numero2):
+    return numero1*numero2
+def cociente(numero1,numero2):
+	return numero1/numero2
+
+print("Para ello, vamos a necesitar que ingreses dos números y solicites cualquiera de las operaciones que se te ofrece")
+print("")
+num1=int(input("Ingrese el primer número: "))
+num2=int(input("Ingrese el segundo número: "))
+opcion=input("¿Qué operación deseas realizar? : (suma, resta, producto o cociente) \n")
+opcion_m=opcion.lower()
+
+if opcion_m=="suma":
+	print("El valor de la suma de los dos números ingresados es: ", suma(num1,num2))
+elif opcion_m=="resta":
+	print("El valor de la resta entre los dos números ingresados es: ", resta(num1,num2))
+elif opcion_m=="producto":
+	print("El valor del producto entre los dos números ingresados es: ", producto(num1,num2))
+elif opcion_m=="cociente":
+	print("El valor del cociente entre los dos números ingresados es: ", cociente(num1,num2))
+
+print("")
+print("Ha finalizado con éxito el módulo uno")
+
+#MODULO DOS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
